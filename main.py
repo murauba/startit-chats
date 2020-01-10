@@ -14,7 +14,7 @@ def health_check():
   return "ok"
 
 
-@app.route('/chat/lasis')
+@app.route('/chat/lasi')
 def ielasit_chatu():
   chata_rindas=[]
   with open("chats.txt","r") as f:
