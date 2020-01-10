@@ -55,7 +55,7 @@ function raadiChataRindas(dati) {
     while (chatUL.firstChild) {
         chatUL.firstChild.remove();
     }
-    for (let rinda of dati["zina"]) {
+    for (let rinda of dati["chat"]) {
       chatLI = izveidoJaunuRindu(rinda.message);
       chatUL.appendChild(chatLI);
     }
