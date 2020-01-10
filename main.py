@@ -13,6 +13,15 @@ def index_page():
 def health_check():
   return "ok"
 
+
+@app.route('/chat/lasis')
+def ielasit_chatu():
+  chata_rindas=[]
+  with open("chats.txt","r") as f:
+    for rinda in f:
+      chata_rindas.append(rinda)
+  return jsonify({"chats:"chata_rindas})
+
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
     app.run(threaded=True, port=5000, debug=True)
