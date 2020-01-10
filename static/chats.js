@@ -37,3 +37,10 @@ async function sutit(){
     const dataObject=await ret.json();
     showsimple(dataObject);
 }
+
+let ievade=document.getElementById("zina");
+ievade.addEventListener("keyup", function(event){
+    if (event.keyCode === 13){
+        sutit();
+    }
+})
