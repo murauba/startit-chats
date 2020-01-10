@@ -16,3 +16,20 @@ function showsimple(dati){
     }
     chatadiv.innerHTML=chats;
 }
+
+async function sutit(){
+    let zinasElem=document.getElementById('zina');
+    let zina=zinasElem.value;
+    zinasElem.value="";
+    const ret=await fetch('chat/suuti',{
+        
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({"chats":zina})
+
+        }
+    
+    )
+}
