@@ -1,10 +1,10 @@
 console.log("konsole");
-const refr=1000;
+const refr=2000;
 
 async function lasit(){
     const ret = await fetch('chat/lasi');
     const dataObject=await ret.json();
-    showsimple(dataObject);
+    raadiChataRindas(dataObject);
     await new Promise(resolve =>setTimeout(resolve, refr));
     await lasit();
 }
@@ -35,7 +35,7 @@ async function sutit(){
     
     );
     const dataObject=await ret.json();
-    showsimple(dataObject);
+    raadiChataRindas(dataObject);
 }
 
 let ievade=document.getElementById("zina");
@@ -50,13 +50,13 @@ ievade.addEventListener("keyup", function(event){
 
 
 function raadiChataRindas(dati) {
-    const chatUL = document.getElementById("chat");
+    const chatUL = document.getElementById("chats");
     // novaacam ieprieksheejo saturu
     while (chatUL.firstChild) {
         chatUL.firstChild.remove();
     }
-    for (let rinda of dati["chat"]) {
-      chatLI = izveidoJaunuRindu(rinda.message);
+    for (let rinda of dati["chats"]) {
+      chatLI = izveidoJaunuRindu(rinda);
       chatUL.appendChild(chatLI);
     }
     // noskrolleejam uz leju pie peedeejaa chata texta
@@ -65,12 +65,12 @@ function raadiChataRindas(dati) {
   }
   
   
-  function izveidoJaunuRindu(zinja) { 
+  function izveidoJaunuRindu(zina) { 
     let newLI = document.createElement("li");
     newLI.className = "left clearfix"
     let newDiv = document.createElement("div"); 
     newDiv.className = "chat-body clearfix"
-    let newContent = document.createTextNode(zinja); 
+    let newContent = document.createTextNode(zina); 
     newLI.appendChild(newDiv); 
     newDiv.appendChild(newContent); 
     return newLI;
