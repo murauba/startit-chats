@@ -6,6 +6,7 @@ async function lasit(){
     const dataObject=await ret.json();
     showsimple(dataObject);
     await new Promise(resolve =>setTimeout(resolve, refr));
+    await lasit();
 }
 
 function showsimple(dati){
