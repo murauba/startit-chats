@@ -1,4 +1,4 @@
-from flask import Flask, render_template, json, jsonify
+from flask import Flask, render_template, json, jsonify, request
 
 
 app = Flask('app')
@@ -21,6 +21,14 @@ def ielasit_chatu():
     for rinda in f:
       chata_rindas.append(rinda)
   return jsonify({"chats":chata_rindas})
+
+
+@app.route('/chat/suuti', methods=['POST'])
+def suti_zinu():
+  dati = request.json
+  with open ("chats.txt","a", newline="", encoding="UTF-8") as f:
+    f.write(dati["chats"]+"\n")
+  return ielasit_chatu()
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
