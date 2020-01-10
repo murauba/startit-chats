@@ -11,7 +11,7 @@ function showsimple(dati){
     const newline="</br>";
     let chats = "";
     let chatadiv=document.getElementById("chats");
-    for (let rinda of dari['chats']){
+    for (let rinda of dati['chats']){
         chats=chats+rinda+newline;
     }
     chatadiv.innerHTML=chats;
