@@ -4,10 +4,12 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link href="{{ url_for('static', filename='favicon.ico')}}" rel="icon" type="image/x-icon"/>
-<script src="{{ url_for('static', filename='chats.js')}}" type="text/javascript"></script>
+
 <title>Cats</title>
 </head>
-<body>
-<h1>Template</h1>
+<body onLoad="lasit();" class="body">
+{% block saturs %}
+{% endblock %}
+<script src="{{ url_for('static', filename='chats.js')}}" type="text/javascript"></script>
 </body>
 </html>
