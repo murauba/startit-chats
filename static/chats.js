@@ -4,7 +4,7 @@ const refr=1000;
 async function lasit(){
     const ret = await fetch('chat/lasi');
     const dataObject=await ret.json();
-    raadiChataRindas(dataObject);
+    showsimple(dataObject);
     await new Promise(resolve =>setTimeout(resolve, refr));
     await lasit();
 }
@@ -35,7 +35,7 @@ async function sutit(){
     
     );
     const dataObject=await ret.json();
-    raadiChataRindas(dataObject);
+    showsimple(dataObject);
 }
 
 let ievade=document.getElementById("zina");
