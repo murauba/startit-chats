@@ -1,5 +1,5 @@
 console.log("konsole");
-const refr=5000
+const refr=1000;
 
 async function lasit(){
     const ret = await fetch('chat/lasi');
