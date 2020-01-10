@@ -5,6 +5,7 @@ async function lasit(){
     const ret = await fetch('chat/lasi');
     const dataObject=await ret.json();
     showsimple(dataObject);
+    await new Promise(resolve =>setTimeout(resolve, refr));
 }
 
 function showsimple(dati){
