@@ -20,7 +20,7 @@ def ielasit_chatu():
   with open("chats.txt","r") as f:
     for rinda in f:
       chata_rindas.append(rinda)
-  return jsonify({"chats:"chata_rindas})
+  return jsonify({"chats":chata_rindas})
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
