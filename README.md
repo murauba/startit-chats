@@ -24,6 +24,8 @@ Katrā posmā ir vairāki uzdevumi - jaunu failu un funkciju veidošana, funkcij
 
 Sīkāk par posmiem un uzdevumiem skatīties [UZDEVUMI](UZDEVUMI.md)
 
+Ir aplūkojama [prezentācija](https://gitpitch.com/startitfonds/startit-chats)
+
 ## Funkcionalitātes idejas
 
 - [ ] lasīt ziņas
