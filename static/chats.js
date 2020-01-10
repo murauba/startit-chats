@@ -31,5 +31,6 @@ async function sutit(){
 
         }
     
-    )
+    );
+    const dataObject=await ret.json();
 }
