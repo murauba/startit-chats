@@ -17,7 +17,7 @@ def health_check():
 @app.route('/chat/lasi')
 def ielasit_chatu():
   chata_rindas=[]
-  with open("chats.txt","r") as f:
+  with open("chats.txt","r", encoding="UTF-8") as f:
     for rinda in f:
       chata_rindas.append(rinda)
   return jsonify({"chats":chata_rindas})
